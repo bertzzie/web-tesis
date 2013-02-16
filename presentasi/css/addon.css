@@ -1,0 +1,39 @@
+.reveal section img.img-transparant {
+    background: none;
+    border: none;
+}
+
+.reveal section .monospace {
+    font-family: monospace;
+}
+
+.reveal section .approved {
+    color: #33FF33;
+}
+
+.reveal section .rejected {
+    color: red;
+}
+
+.reveal section ul.centered-list li,
+.reveal section ol.centered-list li {
+    list-style: none;
+    text-align: center;
+}
+
+.reveal section table {
+    margin: 0 auto;
+}
+
+.reveal section table td,
+.reveal section table th {
+    padding: .5em;
+    text-align: center;
+}
+
+.reveal section table thead th {
+}
+
+.reveal section pre.response-code {
+    text-align: center;
+}

@@ -1,0 +1,260 @@
+body {
+    background: url(../img/bgpattern.png);
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    width: 1024px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+.fallback-message {
+    text-align: center;
+}
+
+.impress-not-supported #impress {
+    display: none;
+}
+
+.past, .future {
+    color: #999;
+    opacity: 0.4;
+}
+
+.centered {
+    text-align: center;
+}
+
+.normal-size {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.small {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.big {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.semi-huge {
+    font-size: 47px;
+    line-height: 55px;
+}
+
+.huge {
+    font-size: 60px;
+}
+
+.success {
+    color: #41DC41;
+}
+
+.error {
+    color: #FE0000;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.content {
+    text-align: justify;
+}
+
+.heading {
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.highlight {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.one-third {
+    width: 341px;
+}
+
+.four-hundred-wide {
+    width: 400px;
+}
+
+.half {
+    width: 512px;
+}
+
+#main-title, #sub-title {
+    font-variant: small-caps;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#main-title #title-1 {
+    font-size: 60px;
+    line-height: 65px;
+}
+
+#main-title #title-2 {
+    font-size: 72px;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+#main-title #title-3 {
+    font-size: 65px;
+    line-height: 70px;
+}
+
+#logos {
+    float: left;
+}
+
+#logo-itb {
+    width: 128px;
+}
+
+#authors {
+    float: left;
+}
+
+.author, #itb {
+}
+
+.author h3, .author h4, #itb h3, #itb h4 {
+    margin: 0 auto;
+}
+
+.author h3, #itb h3 {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.author h4, #itb h4 {
+    font-size: 20px;
+    font-variant: normal;
+    line-height: 18px;
+}
+
+#alex {
+    float: left;
+}
+
+#benhard {
+    float: right;
+}
+
+#latar-belakang, #evaluasi-hasil {
+    font-size: 36px;
+    line-height: 38px;
+}
+
+#latar1-heading {
+    font-size: 26px;
+    line-height: 26px;
+}
+
+#latar1-isi {
+}
+
+#latar2-intro {
+    text-align: center;
+}
+
+#latar2-main {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+}
+
+#latar2-isi {
+}
+
+#latar3-heading {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+#tujuan1-head, #tujuan1-isi,
+#tujuan2-head, #tujuan2-isi,
+#tujuan3-head, #tujuan3-isi {
+    text-align: center;
+}
+
+#tujuan1-main, #tujuan3-main {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+#tujuan2-main {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+
+#metodologi {
+    line-height: 25px;
+}
+
+#waterfall {
+    margin: 0 auto;
+    width: 250px;
+}
+
+#perangkat-pengujian-isi {
+    text-align: center;
+}
+
+.evaluation-result {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#tidak-akurat {
+    margin: 0;
+}
+
+.architecture-img {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.architecture {
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+
+.present .architecture {
+         -o-transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    z-index: 9999;
+}
+
+.past .architecture img, 
+.future .architecture img {
+    opacity: 0.1;
+}
+
+.past, .present, .future, .active {
+  -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+

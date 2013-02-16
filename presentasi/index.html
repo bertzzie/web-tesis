@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Presentasi Sidang Tesis Alex Xandra Albert Sim</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/addon.css">
+        <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                    <h1>Sidang Tesis</h1>
+                    <p>
+                    <small>Alex Xandra Albert Sim (23511051)</small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Judul</h2>
+                    <p>
+                    Pengembangan Perangkat Lunak Diagnosa Mesin Mobil Berdasarkan Standar OBD-II <br>
+                    Studi Kasus: Mercedes Benz E320 1998 V-Engine
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Pendahuluan</h1>
+                    </section>
+                    <section>
+                        <h2>ECU (Engine Control Unit)</h2>
+                        <p>Unit kontrol yang biasanya ada dalam mobil modern, untuk <span class="fragment highlight-red">optimasi performa</span></p>
+                    </section>
+                    <section>
+                        <h2>ECU Berdampak Positif</h2>
+                        <p>untuk manufaktur, tapi bisa mengancam bengkel karena bengkel <span class="fragment highlight-red">tidak dapat melakukan reparasi</span> tanpa informasi ECU dari manufaktur</p>
+                    </section>
+                    <section>
+                        <h2>Uni Eropa</h2>
+                        <p>
+                        Membuat regulasi <em>anti-competitive</em> sehingga <span class="fragment highlight-red">ECU tidak boleh dikunci manufaktur</span>
+                        </p>
+                    </section>
+                    <section>
+                        <h2>OBD-II</h2>
+                        <p>
+                        Hasil dari regulasi yang dibahas sebelumyna
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Ide Tesis</h2>
+                        <p class="fragment roll-in">Eksplorasi teknologi ECU...</p>
+                        <p class="fragment roll-in">cara kerja ECU...</p>
+                        <p class="fragment roll-in">cara komunikasi ECU dengan perangkat lain...</p>
+                    </section>
+                </section>
+
+                    <section>
+                        <section>
+                            <h1>Rumusan Masalah</h1>
+                        </section>
+                        <section>
+                            <blockquote>
+                                eksplorasi <span class="fragment highlight-red">cara kerja ECU</span> serta pengembangan sebuah perangkat lunak diagnosa yang dapat berkomunikasi dengan ECU...
+                            </blockquote>
+                        </section>
+                        <section>
+                            <blockquote>
+                                Perangkat lunak yang <span class="fragment highlight-red">berkomunikasi dengan ECU</span> merupakan perangkat lunak diagnosa ECU, yang dapat melakukan pembacaan status kendaraan serta melakukan pengaturan berbagai parameter dalam kendaraan
+                            </blockquote>
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h1>Tujuan Tesis</h1>
+                        </section>
+                        <section>
+                            <p>Meneliti dan mendokumentasikan cara kerja ECU</p>
+                            <ul>
+                                <li class="fragment">arsitektur</li>
+                                <li class="fragment">fungsionalitas</li>
+                                <li class="fragment">metode komunikasi</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <p>Mengembangkan perangkat lunak diagnosa ECU</p>
+                            <p class="fragment">sesuai dengan standar OBD-II</p>
+                        </section>
+                        <section>
+                            Pembacaan fitur non-standar OBD-II pada ECU <small><em>(opsional)</em></small>
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h1>Ruang Lingkup</h1>
+                            <h3>dan</h3>
+                            <h2>Batasan Masalah</h2>
+                        </section>
+                        <section>
+                            <blockquote>
+                                Tesis ini mencakup kajian <span class="fragment highlight-red">cara kerja dari ECU</span>, termasuk <span class="fragment highlight-red">komunikasi antara ECU dengan perangkat diagnosa</span>. Selain itu, pengembangan perangkat lunak diagnosa juga dilakukan, dengan target pencapaian minimal <span class="fragment highlight-red">kompatibilitas dengan standar OBD-II</span>.
+                            </blockquote>
+                        </section>
+                    </section>
+
+                    <section>
+                        <h1>Tinjauan Pustaka</h1>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Engine Control Unit (ECU)</h2>
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/car-brain.png">
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/ecu-component.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>On-Board Diagnostic (OBD)</h2>
+                        </section>
+                        <section>
+                            <h3>3 Kategori Standar:</h3>
+                            <ol>
+                                <li class="fragment">Standar Komunikasi dengan ECU</li>
+                                <li class="fragment">Standar Perintah ECU (PID)</li>
+                                <li class="fragment">Standar Kode Kealahan (DTC)</li>
+                            </ol>
+                        </section>
+                        <section>
+                            <h3>Protokol Komunikasi OBD-II</h3>
+                            <ol>
+                                <li>J1850 PWM</li>
+                                <li>J1850 VPW</li>
+                                <li class="fragment highlight-green">ISO 9141-2</li>
+                                <li class="fragment highlight-green">ISO 14230 (KWP2000)</li>
+                                <li>ISO 15765-4 (CAN)</li>
+                            </ol>
+                        </section>
+                        <section>
+                            <h3>Protokol Komunikasi OBD-II</h3>
+                            <p>
+                            Implementasi populer: ELM327
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Parameter ID (PID)</h3>
+                            <ul>
+                                <li class="fragment">perintah permintaan informasi</li>
+                                <li class="fragment">ditentukan oleh standar OBD-II</li>
+                                <li class="fragment">tidak wajib diimplementasikan <span class="fragment roll-in">:(</span></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Mode Operasi Parameter ID (PID)</h3>
+                            <ul>
+                                <li class="fragment"><strong>Mode 1</strong>: data <em>real-time</em></li>
+                                <li class="fragment"><strong>Mode 2</strong>: data <em>snapshot</em></li>
+                                <li class="fragment"><strong>Mode 3</strong>: data DTC</li>
+                                <li class="fragment"><strong>Mode 4</strong>: hapus DTC, MIL</li>
+                                <li class="fragment"><strong>Mode 5</strong>: sensor oksigen</li>
+                                <li class="fragment"><strong>Mode 6</strong>: sensor lain-lain</li>
+                                <li class="fragment"><strong>Mode 7</strong>: DTC tertunda</li>
+                                <li class="fragment"><strong>Mode 8</strong>: perintah operasional sistem <em>on-board</em></li>
+                                <li class="fragment"><strong>Mode 9</strong>: VIN (Vehicle ID Number)</li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Pembacaan Respon ECU</h2>
+                        </section>
+                        <section>
+                            <h2>Pembacaan Respon ECU</h2>
+                            <p>
+                            Misal:<br>
+                            PID yang dikirim: <span class="monospace">01 0C</span><br>
+                            Respon ECU: <span class="monospace">37 74</span><br>
+                            <a>Bagaimana memproses responnya?</a>
+
+                            <aside class="notes">
+                                PID 01 0C berfungsi untuk menghitung RPM mesin mobil.
+                            </aside>
+                        </section>
+                        <section>
+                            <h2>Pemrosesan Respon ECU</h2>
+                            <p class="fragment">Cek rumus untuk <span class="monospace">01 0C</span>:</p>
+                            <pre class="fragment response-code">
+                                <code>
+((A * 256) + B) / 4
+                                </code>
+                            </pre>
+                            <p class="fragment">Aplikasikan dengan respon:</p>
+                            <pre class="fragment response-code">
+                                <code>
+((55 * 256) + 116) / 4
+                                </code>
+                            </pre>
+                            <p class="fragment">Maka didapatkan putaran mesin ialah: <span class="monospace">3549</span> RPM</p>
+
+                            <aside class="notes">
+                                A == Byte Pertama <br>
+                                B == Byte Kedua <br>
+                                <strong>Catatan:</strong> A dan B dihitung dalam desimal (basis 10) respon dari ECU diberikan dalam heksa desimal (basis 16).
+                            </aside>
+                        </section>
+                    </section>
+
+                    <section id="themes">
+                        <h1>Analisis Sistem</h1>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Deskripsi Kebutuhan</h2>
+                        </section>
+                        <section>
+                            <p>
+                            Secara singkat, kebutuhan sistem yaitu:
+                            <ul>
+                                <li>berjalan pada PC standar</li>
+                                <li>komunikasi dengan ECU</li>
+                                <li>mengirim perintah dan membaca respon ECU</li>
+                                <li>memberikan informasi diagnosa mesin</li>
+                                <li>antarmuka berkendara</li>
+                                <li>terminal</li>
+                            </ul>
+                            </p>
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/scantool-workflow.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Rancangan Antarmuka</h2>
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/gui-sample-1.png">
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/gui-sample-2.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <h1>Perancangan Sistem</h1>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Lingkungan Pengembangan</h2>
+                        </section>
+                        <section>
+                            <h3>Java Ecosystem</h3>
+                            <p class="fragment"><a>Why?</a></p>
+                        </section>
+                        <section>
+                            <h3>Why Java</h3>
+                            <ul>
+                                <li class="fragment">Portable</li>
+                                <li class="fragment">Compatible</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <p>Programming Language:</p>
+                            <h3>Scala</h3>
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Arsitektur Sistem</h2>
+                        </section>
+                        <section>
+                            <h3>Overview</h3>
+                            <img class="img-transparant" src="img/architecture-overview.png">
+                        </section>
+                        <section>
+                            <h3>GUI Layer</h3>
+                            <img class="img-transparant" src="img/gui-class-diagram.png">
+                            <p><a href="#/12/1">(ke mockup layar)</a></p>
+                        </section>
+                        <section>
+                            <h3>Model Layer (DB)</h3>
+                            <img class="img-transparant" src="img/erd.png">
+                        </section>
+                        <section>
+                            <h3>Model Layer (Serial)</h3>
+                            <img class="img-transparant" src="img/model-serial-class-diagram.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <h2>Konstruksi, Hasil, dan Evaluasi</h2>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Konstruksi<br>Perangkat Lunak</h2>
+                        </section>
+
+                        <section>
+                            <h3>Hybrid Model</h3>
+                            <img class="img-transparant" src="img/development-process.png">
+                        </section>
+                        <section>
+                            <h3>Why Hybrid?</h3>
+                            <p class="fragment">
+                            Perlu <em>waterfall</em> karena:
+                            <ul class="centered-list">
+                                <li class="fragment"><a>OBD-II terlalu besar</a></li>
+                                <li class="fragment"><a>PID OBD-II tidak konsisten</a></li>
+                            </ul>
+                            </p>
+                            <p class="fragment">
+                            Perlu <em>iteratif</em> karena:
+                            <ul class="centered-list">
+                                <li class="fragment"><a>GUI sulit</a></li>
+                                <li class="fragment"><a>Tidak bisa bekerja di ECU setiap saat</a></li>
+                            </ul>
+                            </p>
+                        </section>
+                        <section>
+                            <h3>Pengembangan secara <em>Waterfall</em></h3>
+                            <ol>
+                                <li>Analisis Kebutuhan</li>
+                                <li>Analisis dan Perancangan Sistem</li>
+                                <li>Perancangan Basis Data</li>
+                                <li>Pembacaan data kembalian PID</li>
+                            </ol>
+                        </section>
+                        <section>
+                            <h3>Pengembangan secara <em>Iteratif</em></h3>
+                            <ol>
+                                <li>Antarmuka Sistem</li>
+                                <li>Controller</li>
+                                <li>Serial Port model</li>
+                            </ol>
+                        </section>
+                    </section>
+
+
+                    <section>
+                        <section>
+                            <h2>Hasil Pengembangan</h2>
+                        </section>
+                        <section>
+                            <h3>Final Package</h3>
+                            <img class="img-transparant" src="img/package-diagram.png">
+                        </section>
+                        <section>
+                            <h1>Demo Program</h1>
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h3>Lapisan Antarmuka Sistem</h3>
+                            <img class="img-transparant" src="img/gui-layer-package.png">
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/gui-sample-1.png">
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/gui-sample-2.png">
+                        </section>
+                        <section>
+                            <h4 class="monospace">thesis.bert.gui</h4>
+                            <img class="img-transparant" src="img/thesis-bert-gui-class.png">
+                        </section>
+                        <section>
+                            <h4 class="monospace">thesis.bert.gui</h4>
+                            <img class="img-transparant" src="img/thesis-bert-gui-sequence.png">
+                        </section>
+                        <section>
+                            <h4 class="monospace">thesis.bert.gui.controls</h4>
+                            <img class="img-transparant" src="img/thesis-bert-gui-controls-class.png">
+                        </section>
+                        <section>
+                            <h4 class="monospace">thesis.bert.gui.components</h4>
+                            <img class="img-transparant" src="img/thesis-bert-gui-components-class.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h3>Lapisan Model Sistem</h3>
+                            <img class="img-transparant" src="img/model-layer-package.png">
+                        </section>
+                        <section>
+                            <h3 class="monospace">OBDDB</h3>
+                            <pre><code>
+object DTCDetails extends Table[(String, String, Clob)]("DTCDETAILS") {
+  def id = column[String]("ID", O DBType ("CHAR(4)"), O NotNull)
+  def dtcId = column[String]("DTCID", O DBType ("CHAR(1)"), O NotNull)
+  def description = column[Clob]("DESCRIPTION")
+
+  def * = id ~ dtcId ~ description
+  def pk = primaryKey("pk_DTCDetails", id ~ dtcId)
+  def fkDTC = foreignKey("fk_DTCDetails_DTC", dtcId, DTC)(_.id)
+}                            
+                            </code></pre>
+                        </section>
+                        <section>
+                            <h3 class="monospace"><a href="#/14/4">OBDModel</a></h3>
+                        </section>
+                        <section>
+                            <h3 class="monospace">SupportedPIDFile</h3>
+                            <img class="img-transparant" src="img/supported-pid-file.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h3>Lapisan Utilitas Sistem</h3>
+                            <img class="img-transparant" src="img/utility-layer-package.png">
+                        </section>
+                        <section>
+                            <h3 class="monospace">lib.helper.BinaryHelper</h3>
+                            <img class="img-transparant" src="img/binary-helper.png">
+                        </section>
+                        <section>
+                            <h3 class="monospace">lib.serial.*</h3>
+                            <img class="img-transparant" src="img/lib-serial.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <h1>Evaluasi Hasil</h1>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Komunikasi dengan ECU</h2>
+                            <h1 class="fragment roll-in approved">OK</h1>
+                        </section>
+                        <section>
+                            <h2>Kelengkapan OBD-II</h2>
+                            <h1 class="fragment roll-in approved">79.55%</h1>
+                        </section>
+                        <section>
+                            <h2>Akurasi Informasi</h2>
+                            <h1 class="fragment roll-in rejected">X</h1>
+                        </section>
+                        <section>
+                            <h2>Akurasi Informasi</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Perangkat</th>
+                                        <th>Rata-rata Jeda</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>OBD Simulator</td>
+                                        <td>~1550 ms</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mercedes Benz E320</td>
+                                        <td>~2100 ms</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chevrolet Aveo 2003</td>
+                                        <td>~2800 ms</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section>
+                            <img class="img-transparant" src="img/graph.png">
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h2>Evaluasi Performa</h2>
+                        </section>
+                        <section>
+                            <h3>Prosedur Pengujian</h3>
+                            <ol>
+                                <li>Jalankan aplikasi</li>
+                                <li>Koneksi ke port serial</li>
+                                <li>Submenu grafik</li>
+                                <li>
+                                Parameter:
+                                <ul>
+                                    <li>Sumbu X: PID 01 0C (RPM Mesin)</li>
+                                    <li>Sumbu Y: PID 01 0D (Kecepatan Kendaraan)</li>
+                                </ul>
+                                </li>
+                                <li>Tunggu 5 menit</li>
+                                <li>Disconnect dan matikan aplikasi</li>
+                            </ol>
+                        </section>
+                        <section>
+                            <h3>Lingkungan Pengujian (Hardware)</h3>
+                            <ul class="centered-list">
+                                <li>Intel Core i5-2410M (2.3 GHz)</li>
+                                <li>8 GB 1333 MHz DDR3</li>
+                                <li>1366x768</li>
+                                <li>500 GB SATA (5400 RPM)</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Lingkungan Pengujian (Software)</h3>
+                            <ul class="centered-list">
+                                <li>Windows 7 Proffesional 64-bit</li>
+                                <li>Java version "1.7.0_09"</li>
+                                <li>Scala code runner version 2.9.2</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3><a href="img/jvisualvm.png">Hasil Pengujian</a></h3>
+                        </section>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h1>Kesimpulan<br>dan<br>Saran</h1>
+                        </section>
+                        <section>
+                            <h2>Kesimpulan</h2>
+                            <ol>
+                                <li>Implementasi OBD-II <span class="fragment highlight-red">mudah</span>; membantu bengkel</li>
+                                <li>Port serial <span class="fragment highlight-red">tidak cocok</span> untuk data real-time</li>
+                            </ol>
+                        </section>
+                        <section>
+                            <h2>Saran</h2>
+                            <ol>
+                                <li><em>Protocol Reverse Engineering</em> untuk PID non-standar atau standar tapi tidak terdokumentasi</li>
+                                <li>Protokol baru untuk data <em>real-time</em>; ECU juga harus diperbaharui</li>
+                                <li><em>Expert System</em> atau DSS</li>
+                            </ol>
+                        </section>
+                    </section>
+
+                    <section>
+                        <h1>Terima Kasih.</h1>
+                    </section>
+
+                    </div>
+
+                </div>
+
+                <script src="lib/js/head.min.js"></script>
+                <script src="js/reveal.min.js"></script>
+
+                <script>
+
+                    // Full list of configuration options available here:
+                    // https://github.com/hakimel/reveal.js#configuration
+                    Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
+
+                        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                        // Optional libraries used to extend on reveal.js
+                        dependencies: [
+                        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                        // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                        ]
+                    });
+
+                </script>
+
+            </body>
+        </html>

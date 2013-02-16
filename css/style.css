@@ -1,0 +1,91 @@
+body {
+    background-color: #3D79D0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.book {
+    font-weight: 300;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+#tesis {
+    color: #FFF;
+    font-size: 128px;
+    font-variant: small-caps;
+    left: 10px;
+    margin: 0;
+    line-height: 99px;
+    top: 10px;
+}
+
+#nama {
+    color: #CCC;
+    font-size: 32px;
+    font-variant: small-caps;
+    left: 80px;
+    margin: 0;
+    top: 110px;
+}
+
+#nama a {
+    text-decoration: none;
+}
+
+#judul {
+    color: #FFF;
+    font-size: 36px;
+    left: 20%;
+    text-align: center;
+    top: 38%;
+}
+
+#menu {
+    bottom: 10px;
+    font-size: 24px;
+    right: 75px;
+}
+
+#menu li {
+       -moz-transition: all 0.5s ease-in-out;
+         -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+
+    list-style: none;
+    padding-right: 1em;
+    text-align: right;
+    width: 200px;
+}
+
+#menu li:hover {
+    background-color: #230759;
+}
+
+#menu a {
+       -moz-transition: all 0.5s ease-in-out;
+         -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+
+    color: #FFF;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    font-style: italic;
+}
